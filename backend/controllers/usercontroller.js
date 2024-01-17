@@ -34,7 +34,7 @@ exports.booknearestcab = async (req,res) => {
     })
 }   
 
-const thresholdDis = 25000000000;
+const thresholdDis = 500000;
 const maxcabs = 10;
 
 exports.shownearbycabs = async (req,res) => {
@@ -44,7 +44,7 @@ exports.shownearbycabs = async (req,res) => {
         console.log("doc is", doc);
         let cabdistance = geolib.getDistance({latitude:latitude,longitude:longitude},{latitude:doc.latitude,longitude:doc.longitude});
         console.log("cabdistance", cabdistance);
-        if(cabdistance<=thresholdDis){
+        if(cabdistance<=thresholdDis && doc.isCabEmpty===false){
             nearbyCabs.push({
                 cabId: doc._id,
                 latitude: doc.latitude,

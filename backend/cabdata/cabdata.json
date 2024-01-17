@@ -1,6 +1,20 @@
 [
     {"latitude":23.8209,
     "longitude":86.4697,
+    "isCabEmpty":false
+    },
+
+    {"latitude":23.8244,
+    "longitude":86.46665,
+    "isCabEmpty":false
+    },
+    {"latitude":23.8288,
+    "longitude":86.4601,
     "isCabEmpty":true
+    },
+    {"latitude":23.8267,
+    "longitude":86.4642,
+    "isCabEmpty":false
     }
+
 ]
